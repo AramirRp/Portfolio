@@ -11,7 +11,7 @@ import Hobbies from './components/hobbies/hobbies';
 
 export const App = () => {
   return (
-    <div>
+    <div className='w-full h-screen'>
       <Navbar />
       <Hero />
       <About />

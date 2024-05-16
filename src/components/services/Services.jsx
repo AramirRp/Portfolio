@@ -1,7 +1,5 @@
 
-import { useState } from "react";
 import Services_Data from "../../assets/services_data"
-import Popup from "../popup/Popup";
 
 import "./services.css"
 import theme_pattern from "../../assets/theme_pattern.png"
@@ -11,7 +9,6 @@ import arrow_icon from "../../assets/arrow_icon.svg"
 
 export const Services = () => {
 
-    const [buttonPopup, setButtonPopup] = useState(false);
 
 
   return (
@@ -30,9 +27,7 @@ export const Services = () => {
                         <p>Read More</p>
                         <img src={arrow_icon} alt="" />
 
-                        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                                 <p className="txt-popup">{service.full}</p>       
-                        </Popup>
                     </div>
                 </div>
             })}

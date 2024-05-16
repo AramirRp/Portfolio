@@ -1,6 +1,4 @@
-import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import Popup from "../popup/Popup";
 
 
 import "./hero.css";
@@ -10,7 +8,6 @@ import cv_pdf from "../../assets/cv-2024.pdf"
 
 export const Hero = () => {
 
-    const [buttonPopup, setButtonPopup] = useState(false);
 
   return (
     <div id="home" className="hero">
@@ -28,11 +25,9 @@ export const Hero = () => {
         
         <div className="hero-resume"> 
 
-        <button onClick={() => setButtonPopup(true)}> Mon CV (il parait)</button>
+        <button> Mon CV (il parait)</button>
 
-          <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
               <a href={cv_pdf} target="_blank"><img src={cv} alt="CV" className="CV" />  </a>          
-          </Popup>
         </div>
       </div>
     </div>
