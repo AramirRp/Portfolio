@@ -1,17 +1,16 @@
-.color-sent{
-    background: linear-gradient(270deg, #0983bc 10%, #4cbf95 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.color-sent {
+  background: linear-gradient(270deg, #0983bc 10%, #4cbf95 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-connect {
+  background: linear-gradient(264deg, #0983bc -5.09%, #4cbf95 100%);
 }
 
 /*
 
-.hero-connect{
-    padding: 25px 45px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #0983bc -5.09%, #4cbf95 100%);
-    cursor: pointer;
-}
+
 .hero-resume{
     padding: 25px 45px;
     border-radius: 50px;
