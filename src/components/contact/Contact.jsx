@@ -3,7 +3,6 @@ import emailjs from '@emailjs/browser';
 
 import './contact.css'
 
-import theme_pattern from "../../assets/theme_pattern.png"
 
 
 export const Contact = () => {
@@ -24,23 +23,21 @@ export const Contact = () => {
     };
 
   return (
-    <div id='contact' className="contact">
-        <div className="contact-title">
-            <h2>Me contacter</h2>
-            <img src={theme_pattern} alt="" />
+    <div id='contact' className="flex flex-col items-center justify-center mt-10 gap-20 w-[100%]">
+        <div className="contact-title relative z-[-2]">
+            <h2 className='text-2xl font-semibold px-[30px] py-0 hidden'>Me contacter</h2>
         </div>
-        <div className="contact-section">
-            <div className="contact-left">
-                <h2>Echangons ! </h2>
-                <p>Si vous souhaitez que l'on discute ensemble, que l'on parle, collaboration ou bien encore de votre album musical préféré, n'hésitez pas ! </p>
-                <div className="contact-details">
-                    <div className="contact-detail">
+            <div className="contact-left w-[100%] flex flex-col gap-[30px]">
+                <h2 className='text-[66px] font-bold bg-clip-text'>Echangons ! </h2>
+                <p className=' text-black text-xl '>Si vous souhaitez que l'on discute ensemble, que l'on parle, collaboration ou bien encore de votre album musical préféré, n'hésitez pas ! </p>
+                <div className="contact-details flex flex-col gap-[30px] text-black text-[22px]">
+                    <div className="contact-detail flex items-center gap-5">
                     </div>
-                    <div className="contact-detail">
+                    <div className="contact-detail flex items-center gap-5">
                     </div>
                 </div>
-            </div>
-            <div className="contact-right">
+            
+            <div className="contact-right ml-[2%] flex flex-col gap-[30px]">
                 <form className='--form-control --card' ref={form} onSubmit={sendEmail}>
                     <input type="text" placeholder="Nom"
                     name=' user-name' required/>
@@ -49,12 +46,11 @@ export const Contact = () => {
                     <input type="text" placeholder="Sujet"
                     name=' subject' required/>
                     <textarea  placeholder="message" name="message" cols="30" rows="10"></textarea>
-                    <button className='contact-submit' type='submit'>Envoyer message</button>
+                    <button className='contact-submit  px-[5%] py-[3%]' type='submit'>Envoyer message</button>
                 </form>
             </div>
         </div>
     </div>
-
 )
 }
 

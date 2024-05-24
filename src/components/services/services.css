@@ -1,123 +1,24 @@
-/* .services{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
-}
 
-.services-title{
-    position: relative;
-}
-.services-title h2{
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
-}
-.services-title img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-
-.services-format{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
-    border-radius: 20px;
-    border: 2px solid rgb(116, 116, 116);
-    transition: 0.4s;
-    cursor: pointer;
-}
-.services-format h4{
-    font-size: 28px;
-    font-weight: 600;
-}
 .services-format h3{
-    font-size: 38px;
-    font-weight: 800;
     background: linear-gradient(270deg, #0983bc 50%, #4cbf95 100%);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.services-format p{
-    color: #000000d4;
-    font-size: 24px;
-    line-height: 40px;
-    min-width: 300px;
-
-}
-
-.services-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    ;
-    gap: 40px;
-    margin-bottom: 60px;
-}
-
-.services-readmore{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-top: 20px;
-}
 
 .services-format:hover{
-    border: 2px solid #4cbf95;
-    background-image: linear-gradient(40deg, #274655, #59a487);
+    border: 2px solid #24614b;
+    background-image: linear-gradient(40deg, #689bb5, #67c7a2);
     transform: scale(1.05);
     transition: 0.4s;
 }
+
 .services-format p:hover{
     color:white;
 }
-@media screen and (max-width: 1200px) {
-    .services {
-      margin: 80px 80px;
-    }
-  }
-  
-  @media screen and (max-width: 992px) {
-    .services {
-      margin: 80px 40px;
-    }
-    .services-title h2 {
-      font-size: 60px;
-    }
-    .services-format h4 {
-      font-size: 24px;
-    }
-    .services-format h3 {
-      font-size: 32px;
-    }
-    .services-format p {
-      font-size: 20px;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .services {
-      margin: 40px 20px;
-    }
-    .services-title h2 {
-      font-size: 48px;
-    }
-  }
-  
-  @media screen and (max-width: 576px) {
-    .services {
-      margin: 20px;
-    }
-    .services-title h2 {
-      font-size: 36px;
-    }
-    .services-format {
-      padding: 20px;
-    }
-  } */
+.services-format h3:hover{
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+

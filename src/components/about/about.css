@@ -7,7 +7,7 @@
 
 .about-skill{
     display: flex;
-    gap: 50px;
+    gap: 25px;
     align-items: center;
     transition: 0.3s;
 }
@@ -32,6 +32,7 @@
     font-weight: 700;
     background: linear-gradient(270deg, #0983bc 50.41%, #4cbf95 90.25%);
     background-clip: text;
+    justify-content: flex-start;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
