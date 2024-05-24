@@ -9,6 +9,7 @@ export const Footer = () => {
             <div className="footer-top-left text-xl">
                 <img src={footer_logo} alt="" className='w-[35%] h-[50%] mb-2 ml-2' />
                 <p className='italic font-light'>crédits photos : <a href='https://www.instagram.com/ianmorlion/'>Ian Morlion</a> et <a href='https://www.facebook.com/vertigesphotovideo'>vertiges</a></p>
+
             </div>
 
         </div>
