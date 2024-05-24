@@ -5,18 +5,22 @@ import antoineBeer from "../assets/carousel/antoine-beer.jpg"
 
 export const  slides = [
         {
+            nm: '01',
             src : antoineMusic,
             alt : "musique : guitare, basse, saxohpone, productrice"
         },
         {
+            nm: '02',
             src: antoinePhoto,
             alt : "Photographie de concert"
         },
         {
+            nm: '03',
             src : antoineBoard,
             alt : "Jeux de sociétés"
         },
         {
+            nm: '04',
             src : antoineBeer,
             alt : "Bière craft : zythologie amateur"
         }
