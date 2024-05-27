@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
@@ -30,7 +29,7 @@ export const Hobbies = () => {
             src={image.src}
             alt={image.alt}
             key={image.nm}
-            className="shadow-[0px_0px_7px_#666] ml-[1%] w-[90%] h-[100%] object-cover rounded-lg"
+            className="shadow-[0px_0px_7px_#666] ml-[1%] w-[90%] h-[90%] object-cover rounded-lg"
           />
         ))}
       </Carousel>
