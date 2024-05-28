@@ -2,16 +2,15 @@
  
 React personnal portfolio made. 
 
-V1 include first popup for CV, css with partial responsive design
+V2 include first popup for CV, tailwind rework for mobile first design
 
-v2 currently in the working : 
+v3 currently in the working : 
 
-- complete rework with tailwind css
-- mobile-first design
-- rework of the popup system
+- working on the desktop css version
+- set a better mapping for the readmore feature
 - adding a dark/multiple themes
 
-ideas for the v3 : 
+ideas for the v4 : 
 
-- adding a animated background with specific library like p5.js
+ - adding a animated background with specific library like p5.js 
 - adding a specific more creative theme
