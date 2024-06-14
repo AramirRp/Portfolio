@@ -19,7 +19,7 @@ const mywork_data = [
         w_no:3,
         w_name:"DangerZoneWeb",
         w_img:project3_img,
-        w_link:"https://www.dangerzoneweb.fr"
+        w_link:"https://antoinerp.wordpress.com/"
     },    
 ]
  
