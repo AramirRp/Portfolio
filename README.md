@@ -17,13 +17,13 @@ minor correction
 
 ### Future update : 
 ```
-- working on the desktop css version
-- set a better mapping for the readmore feature
-- adding a dark/multiple themes
+working on the desktop css version
+set a better mapping for the readmore feature
+adding a dark/multiple themes
 ```
 
 ### Other Ideas for the future :  
 ```
-- adding a animated background with specific library like p5.js 
-- adding a specific more creative theme
+adding a animated background with specific library like p5.js 
+adding a specific more creative theme
 ```
