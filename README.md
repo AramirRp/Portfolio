@@ -5,7 +5,7 @@
 
 LINK : [PORTFOLIO](https://portfolio-antoinerp.vercel.app "Portfolio")
 
-## presentation :
+## Presentation :
 
  That's my personnal portfolio ! I did it as a side project of my current studies, with the goal of making a website that will be my feature lab, using React & Tailwind to progress in terms of responsiveness. 
 
