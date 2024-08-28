@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from "../Themes/ThemeContext";
-import profile_img from "../../assets/photo_proflie.jpg";
+import profile_img from "../../assets/photo_proflie.webp";
 
 export const About = () => {
   const { theme } = useContext(ThemeContext);

@@ -4,10 +4,10 @@ import { Parallax } from 'react-parallax';
 import Popup from "../popup/Popup";
 import { ThemeContext } from "../Themes/ThemeContext";
 
-import profile_img from "../../assets/profile_img.jpg";
-import cv from "../../assets/cv-2024.jpg";
+import profile_img from "../../assets/profile_img.webp";
+import cv from "../../assets/cv-2024.webp";
 import cv_pdf from "../../assets/cv-2024.pdf";
-import heroBackground from "../../assets/hero-background.jpg"; // Add this import
+import heroBackground from "../../assets/hero-background.webp"; // Add this import
 
 export const Hero = () => {
   const [buttonPopup, setButtonPopup] = useState(false);

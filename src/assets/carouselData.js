@@ -1,7 +1,7 @@
-import antoineMusic from "../assets/carousel/antoine-music.jpg"
-import antoinePhoto from "../assets/carousel/antoine-photographer2.jpg"
-import antoineBoard from "../assets/carousel/antoine-boardgames.jpg"
-import antoineBeer from "../assets/carousel/antoine-beer.jpg"
+import antoineMusic from "../assets/carousel/antoine-music.webp"
+import antoinePhoto from "../assets/carousel/antoine-photographer2.webp"
+import antoineBoard from "../assets/carousel/antoine-boardgames.webp"
+import antoineBeer from "../assets/carousel/antoine-beer.webp"
 
 export const  slides = [
         {
