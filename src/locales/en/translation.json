@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "hobbies": "Hobbies",
+    "contact": "Virtual Message"
+  },
+  "hero": {
+    "profileAlt": "Profile picture",
+    "greeting": "Hello, I'm Antoine!",
+    "title": "Newbie frontend/fullstack developer in Paris.",
+    "subtitle": "This is a portfolio, apparently.",
+    "cta": "Send a message",
+    "cv": "My resume",
+    "cvAlt": "Curriculum Vitae"
+  },
+
+  "about": {
+    "title": "About Me",
+    "profileAlt": "Profile picture",
+    "paragraph1": "After several years in the field of communication, I decided to retrain as a full-stack developer, specializing in frontend.",
+    "paragraph2": "In parallel, I am also a musician, composer, and producer with an as-yet-unannounced project in preparation, scheduled for 2025.",
+    "photography": "Photography",
+    "yearsExperience": "Years of Experience",
+    "projects": "Projects"
+  },
+  "services": {
+    "title": "My Skills",
+    "readMore": "Read more",
+    "readLess": "Read less",
+    "web_development": {
+      "name": "Web Development",
+      "desc": "During my current training at Ada Tech School...",
+      "full": "During my current training at Ada Tech School, I have had the chance to quickly improve my skills in numerous programming languages (HTML, CSS, JavaScript, PHP, Python, C#..) and to apply all of this throughout the months of training on various collective and personal projects."
+    },
+    "web_design": {
+      "name": "Web Design",
+      "desc": "Thanks to my current training and previous experiences...",
+      "full": "Thanks to my current training and previous experiences, particularly in communication and web journalism, I have had the opportunity to perform a lot of web design work, whether for websites or services, aimed at effective public use while complying with current GDPR regulations and striving to improve accessibility."
+    },
+    "wordpress": {
+      "name": "WordPress",
+      "desc": "With 7+ years of experience, I have had the chance to...",
+      "full": "With over 7 years of experience with WordPress, I have developed a true expertise in using what is still the most widely used CMS in the world today."
+    },
+    "seo": {
+      "name": "SEO",
+      "desc": "With extensive experience as a web journalist, I have had the chance...",
+      "full": "With extensive experience as a web journalist, I have had the chance to train in SEO over time and to offer genuine expertise in terms of advice and practice regarding natural referencing."
+    },
+    "photography": {
+      "name": "Photography",
+      "desc": "With my participation as a journalist at numerous events...",
+      "full": "With my participation as a journalist at numerous large-scale events, I have had the chance to photograph great artists from the music world (Roy Hargrove, Porcupine Tree...) and to provide a true framework design."
+    },
+    "communication": {
+      "name": "Communication",
+      "desc": "Holder of a master's degree in communication, with over 4 years...",
+      "full": "Holding a master's degree in communication and with over 4 years of experience in the field of communication, I have enjoyed working on various projects in many areas, whether in music, the world of craft beer, or professional training."
+    },
+    "web_writing": {
+      "name": "Web Writing",
+      "desc": "With 7+ years of experience as a web journalist...",
+      "full": "With over 7 years of experience as a web journalist for media such as ActuGaming or DangerZone, I have had the opportunity to improve my skills and expertise in this field, both in pure writing and in professional relationship work."
+    }
+  },
+  "myWork": {
+    "title": "My Latest Projects",
+    "githubButton": "My Github",
+    "arrowAlt": "Arrow",
+    "projects": {
+      "koiKonRegarde": "KoiKonRegarde",
+      "koiKonEcoute": "KoiKonEcoute - V1",
+      "dangerZoneWeb": "DangerZoneWeb"
+    }
+  },
+  "skills": {
+    "title": "My skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
+  },
+  "portfolio": {
+    "title": "My portfolio",
+    "projectsIntro": "Here are some of my projects:"
+  },
+  "hobbies": {
+    "title": "My Hobbies",
+    "music": "Music: guitar, bass, saxophone, producer",
+    "photography": "Concert photography",
+    "boardGames": "Board games",
+    "craftBeer": "Craft beer: zythology"
+  },
+  "contact": {
+    "title": "Let's Connect!",
+    "description": "If you'd like to discuss together, talk about collaboration, or even about your favorite music album, don't hesitate!",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Message",
+    "sendButton": "Send Message",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "Failed to send message. Please try again."
+  },
+  "footer": {
+    "logoAlt": "Footer Logo",
+    "photoCredits": "photo credits:",
+    "and": "and",
+    "githubLink": "Link to GitHub",
+    "instagramLink": "Link to Instagram",
+    "credits": "Design, development, layout, and graphics credits: Antoine Rogé-Picard"
+  }
+}

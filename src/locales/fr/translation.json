@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "portfolio": "Portfolio",
+    "hobbies": "Hobbies",
+    "contact": "Missive virtuelle"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis Antoine!",
+    "title": "Newbie développeur frontend/fullstack sur Paris.",
+    "subtitle": "Ceci est un portfolio, il parait.",
+    "cta": "Envoyer une missive",
+    "cv": "Mon CV"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "profileAlt": "Photo de profil",
+    "paragraph1": "Après plusieurs années dans le domaine de la communication, j'ai décidé de me reconvertir en tant que développeur full-stack, spécialisé en frontend.",
+    "paragraph2": "En parallèle, je suis également un musicien, compositeur, producteur avec un projet encore non annoncé en préparation, prévu pour 2025.",
+    "photography": "Photographie",
+    "yearsExperience": "Années d'expérience",
+    "projects": "Projets"
+  },
+  "services": {
+    "title": "Mes Compétences",
+    "readMore": "Lire plus",
+    "readLess": "Lire moins",
+    "web_development": {
+      "name": "Développement web",
+      "desc": "Lors de mon actuelle formation au sein d'Ada Tech School...",
+      "full": "Lors de mon actuelle formation au sein d'Ada Tech school, j'ai eu la chance de pouvoir rapidement monter en compétences sur de nombreux langages de programmation (HTML, CSS, JavaScript, PHP, Python, C#..) et d'appliquer tout ceci au fil des mois de formations sur différents projets collectifs et personnels."
+    },
+    "web_design": {
+      "name": "Conception web",
+      "desc": "Grâce à mon actuelle formation et mes précédentes expériences...",
+      "full": "Grâce à mon actuelle formation et mes précédentes expériences, notamment dans la communication et le journalisme web, j'ai eu l'occasion d'effectuer tout un travail de conception web, que ce soit pour des sites ou des services, à des fins d'une utilisation effective pour le public, tout en respectant les réglementations RGPD actuelle et en essayant de faire tout un travail autour de l'accessibilité."
+    },
+    "wordpress": {
+      "name": "Wordpress",
+      "desc": "Avec 7+ années d'expériences, j'ai eu la chance de pouvoir...",
+      "full": "Avec plus de 7 années d'expérience avec l'outil Wordpress, j'ai eu la chance de développer une véritable expertise dans l'utilisation de ce qui est encore aujourd'hui le CMS le plus utilisé dans le monde."
+    },
+    "seo": {
+      "name": "SEO",
+      "desc": "Fort d'une grande expérience en tant que journaliste web, j'ai eu la chance...",
+      "full": "Fort d'une grande expérience en tant que journaliste web, j'ai eu la chance de pouvoir me former au SEO sur la durée, et de proposer une véritable expertise en termes de conseil et de pratique concernant le référencement naturel."
+    },
+    "photography": {
+      "name": "Photographie",
+      "desc": "Avec ma participation en tant que journaliste à de nombreux évènements...",
+      "full": "Avec ma participation en tant que journaliste à de nombreux évènements de grande ampleur, j'ai eu la chance de pouvoir photographier de grands artistes du monde la musique (Roy Hargrove, Porcupine tree...) et de proposer un vrai travail de conception de cadre."
+    },
+    "communication": {
+      "name": "Communication",
+      "desc": "Titulaire d'un master en communication, fort de +4 ans...",
+      "full": "Titulaire d'un master en communication et fort de plus de 4 ans d'expérience dans le domaine de la communication, j'ai eu plaisir à travailler sur différents projets dans de nombreux domaines, que ce soit la musique, le monde de la bière artisanale ou encore le monde de la formation professionnelle."
+    },
+    "web_writing": {
+      "name": "Rédaction Web",
+      "desc": "Fort de 7+ années d'expérience en tant que journaliste web...",
+      "full": "fort de plus de 7 années d'expérience en tant que journaliste web pour des médias tel que ActuGaming ou DangerZone, j'ai eu l'occasion de monter en compétence et en expertise dans ce domaine, que ce soit dans la rédaction pure, mais aussi dans tout un travail de relation professionnelle."
+    }
+  },
+  "myWork": {
+    "title": "Mes derniers projets",
+    "githubButton": "Mon Github",
+    "arrowAlt": "Flèche",
+    "projects": {
+      "koiKonRegarde": "KoiKonRegarde",
+      "koiKonEcoute": "KoiKonEcoute - V1",
+      "dangerZoneWeb": "DangerZoneWeb"
+    }
+  },
+  "skills": {
+    "title": "Mes compétences",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Outils"
+  },
+  "portfolio": {
+    "title": "Mon portfolio",
+    "projectsIntro": "Voici quelques-uns de mes projets :"
+  },
+
+  "hobbies": {
+    "title": "Mes Hobbies",
+    "music": "Musique : guitare, basse, saxophone, producteur",
+    "photography": "Photographie de concert",
+    "boardGames": "Jeux de société",
+    "craftBeer": "Bière craft : zythologie"
+  },
+  "contact": {
+    "title": "Echangeons !",
+    "description": "Si vous souhaitez que l'on discute ensemble, que l'on parle collaboration ou bien encore de votre album musical préféré, n'hésitez pas !",
+    "namePlaceholder": "Nom",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Sujet",
+    "messagePlaceholder": "Message",
+    "sendButton": "Envoyer message",
+    "successMessage": "Message envoyé avec succès !",
+    "errorMessage": "Échec de l'envoi du message. Veuillez réessayer."
+  },
+    "footer": {
+      "logoAlt": "Logo du pied de page",
+      "photoCredits": "crédits photos :",
+      "and": "et",
+      "githubLink": "Lien vers GitHub",
+      "instagramLink": "Lien vers Instagram",
+      "credits": "Crédits conception, développement, mise en page, graphisme : Antoine Rogé-Picard"
+    }
+}

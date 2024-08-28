@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from "../Themes/ThemeContext";
+import { useTranslation } from 'react-i18next';
 import footer_logo from '../../assets/logo.svg';
 import logoWhite from "../../assets/logo-white.svg"
 import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome CSS
 
 export const Footer = () => {
   const { theme } = useContext(ThemeContext);
+  const { t } = useTranslation();
+
 
   const getLogo = (theme) => {
     switch(theme) {
@@ -55,11 +58,11 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
           <div className="mb-6 sm:mb-0">
-            <img src={getLogo(theme)} alt="Footer Logo" className="w-32 h-auto mb-4" />
+            <img src={getLogo(theme)} alt={t('footer.logoAlt')} className="w-32 h-auto mb-4" />
             <p className={`text-sm ${styles.text} italic`}>
-              crédits photos : {' '}
+              {t('footer.photoCredits')}{' '}
               <a href='https://www.instagram.com/ianmorlion/' className={`${styles.link} hover:underline`}>Ian Morlion</a>
-              {' '}et{' '}
+              {' '}{t('footer.and')}{' '}
               <a href='https://www.facebook.com/vertigesphotovideo' className={`${styles.link} hover:underline`}>vertiges</a>
             </p>
           </div>
@@ -69,6 +72,7 @@ export const Footer = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className={`${styles.icon} transform transition duration-300 ease-in-out hover:scale-110 hover:-translate-y-1`}
+              aria-label={t('footer.githubLink')}
             >
               <i className="fa fa-github fa-2x"></i>
             </a>
@@ -77,6 +81,7 @@ export const Footer = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className={`${styles.icon} transform transition duration-300 ease-in-out hover:scale-110 hover:-translate-y-1`}
+              aria-label={t('footer.instagramLink')}
             >
               <i className="fa fa-instagram fa-2x"></i>
             </a>
@@ -87,7 +92,7 @@ export const Footer = () => {
         
         <div className={`flex flex-col sm:flex-row justify-between items-center text-sm ${styles.text}`}>
           <p className="mb-4 sm:mb-0 text-center sm:text-left">
-            Crédits conception, développement, mise en page, graphisme : Antoine Rogé-Picard
+            {t('footer.credits')}
           </p>
         </div>
       </div>
