@@ -13,16 +13,14 @@ LINK : [PORTFOLIO](https://portfolio-antoinerp.vercel.app "Portfolio")
 
 ## Last updates : 
 ```
-CV popup
-tailwind rework for mobile first design
-minor correction
+css redone
+rework of the readmore mapping
+added a dark and a custom mode
+rework of the global reponsiveness
 ```
 
 ### Future update : 
 ```
-working on the desktop css version
-set a better mapping for the readmore feature
-adding a dark/multiple themes
 ```
 
 ### Other Ideas for the future :  
