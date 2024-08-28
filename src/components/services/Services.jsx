@@ -1,5 +1,4 @@
 import Services_Data from "../../assets/services_data";
-
 import "./services.css";
 import { useState } from "react";
 
@@ -11,45 +10,45 @@ const parastyle = {
 };
 
 export const Services = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div
-      id="services"
-      className="services  flex flex-col items-center gap-y-10 mx-auto my-10"
-    >
-      <div className="services-title  relative z-[-2]">
-        <h2 className="text-2xl font-semibold px-[30px] py-0">
-          Mes Compétences
-        </h2>
-      </div>
-      <div className="services-container items-center grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10 mb-[60px]">
-        {Services_Data.map((service, index) => {
-          return (
+    <div id="services" className="services bg-gray-100 py-20">
+      <div className="container mx-auto px-4">
+        <div className="services-title text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800">
+            Mes Compétences
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {Services_Data.map((service, index) => (
             <div
               key={index}
-              className="services-format items-center border-black w-[90%] m-auto rounded-lg"
+              className="services-format bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-transparent hover:border-black"
             >
-              <h4 className="text-[28px] ml-4 font-semibold">{service.s_no}</h4>
-              <h3 className="text-[38px] ml-4 font-extrabold bg-clip-text">
-                {service.s_name}
-              </h3>
-              <p className="text-[#000000d4] ml-2 text-2xl leading-10 min-w-[300px]" style={isOpen ? null : parastyle}>
-                {service.full}
-              </p>
-              <div className=" ml-[60%] mb-6 services-readmore flex gap-2 items-center justify-center  mt-10">
-                <button
-                  className="font-semibold text-lg"
-                  onClick={() => setIsOpen(!isOpen)}
+              <div className="p-8 transition-colors duration-300">
+                <h4 className="text-lg font-semibold text-[#24614b] mb-3 group-hover:text-white">{service.s_no}</h4>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800 group-hover:text-white">
+                  {service.s_name}
+                </h3>
+                <p 
+                  className={`text-gray-600 text-lg leading-relaxed mb-6 group-hover:text-gray-200`}
+                  style={openIndex === index ? null : parastyle}
                 >
-                  {isOpen ? "read less..." : "read more..."}
+                  {service.full}
+                </p>
+              </div>
+              <div className="bg-gray-100 p-6">
+                <button
+                  className="w-full font-semibold text-lg py-2 rounded-lg text-white transition-all duration-300 bg-gradient-to-r from-[#689bb5] to-[#67c7a2] hover:from-[#67c7a2] hover:to-[#689bb5]"
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                  {openIndex === index ? "Read less" : "Read more"}
                 </button>
-
-                {/*   <p className="txt-popup"></p>        */}
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </div>
   );

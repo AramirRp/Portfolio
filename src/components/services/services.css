@@ -1,9 +1,4 @@
 
-.services-format h3{
-    background: linear-gradient(270deg, #0983bc 50%, #4cbf95 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 .services-format:hover{
     border: 2px solid #24614b;

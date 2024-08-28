@@ -1,57 +1,75 @@
-import { useRef } from 'react'
+import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-import './contact.css'
-
-
-
 export const Contact = () => {
+  const form = useRef();
 
-    const form = useRef()
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const sendEmail = (e) =>{
-        e.preventDefault();
-
-        emailjs.sendForm('service_i1g5cxb', 'template_xbtv2vo', form.current ,'lvQ3-k5MFEY7DXfO-')
-        .then((result) => {
-            console.log(result.text);
-
-        }, (error) =>{
-            console.log(error.text);
-        });
-        e.target.reset();
-    };
+    emailjs.sendForm('service_i1g5cxb', 'template_xbtv2vo', form.current, 'lvQ3-k5MFEY7DXfO-')
+      .then((result) => {
+        console.log(result.text);
+        alert('Message sent successfully!');
+      }, (error) => {
+        console.log(error.text);
+        alert('Failed to send message. Please try again.');
+      });
+    e.target.reset();
+  };
 
   return (
-    <div id='contact' className="flex flex-col items-center justify-center mt-10 gap-20 w-[100%]">
-        <div className="contact-title relative z-[-2]">
-            <h2 className='text-2xl font-semibold px-[30px] py-0 hidden'>Me contacter</h2>
+    <div id='contact' className="bg-white py-16 sm:py-24">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden mb-8">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center bg-gradient-to-r from-[#0983bc] to-[#4cbf95] bg-clip-text text-transparent inline-block w-full py-2">
+            Echangeons !
+          </h2>
         </div>
-            <div className="contact-left w-[100%] flex flex-col gap-[30px]">
-                <h2 className='text-[66px] font-bold bg-clip-text'>Echangons ! </h2>
-                <p className=' text-black text-xl '>Si vous souhaitez que l'on discute ensemble, que l'on parle, collaboration ou bien encore de votre album musical préféré, n'hésitez pas ! </p>
-                <div className="contact-details flex flex-col gap-[30px] text-black text-[22px]">
-                    <div className="contact-detail flex items-center gap-5">
-                    </div>
-                    <div className="contact-detail flex items-center gap-5">
-                    </div>
-                </div>
-            
-            <div className="contact-right ml-[2%] flex flex-col gap-[30px]">
-                <form className='--form-control --card' ref={form} onSubmit={sendEmail}>
-                    <input type="text" placeholder="Nom"
-                    name=' user-name' required/>
-                   <input type="email" placeholder="email"
-                    name=' user-email' required/>
-                    <input type="text" placeholder="Sujet"
-                    name=' subject' required/>
-                    <textarea  placeholder="message" name="message" cols="30" rows="10"></textarea>
-                    <button className='contact-submit  px-[5%] py-[3%]' type='submit'>Envoyer message</button>
-                </form>
-            </div>
-        </div>
+        <p className="text-center text-gray-700 text-lg sm:text-xl mb-12">
+          Si vous souhaitez que l'on discute ensemble, que l'on parle collaboration ou bien encore de votre album musical préféré, n'hésitez pas !
+        </p>
+        
+        <form ref={form} onSubmit={sendEmail} className="space-y-6">
+          <input
+            type="text"
+            placeholder="Nom"
+            name='user-name'
+            required
+            className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0983bc] transition duration-300"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name='user-email'
+            required
+            className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0983bc] transition duration-300"
+          />
+          <input
+            type="text"
+            placeholder="Sujet"
+            name='subject'
+            required
+            className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0983bc] transition duration-300"
+          />
+          <textarea
+            placeholder="Message"
+            name="message"
+            required
+            className="w-full px-4 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0983bc] transition duration-300 min-h-[150px] resize-y"
+          ></textarea>
+          <div className="text-center">
+            <button
+              type='submit'
+              className="px-8 py-3 bg-gradient-to-r from-[#0983bc] to-[#4cbf95] text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out"
+            >
+              Envoyer message
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-)
+  );
 }
 
-export default Contact
+export default Contact;

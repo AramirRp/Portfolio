@@ -7,7 +7,7 @@ export const  slides = [
         {
             nm: '01',
             src : antoineMusic,
-            alt : "musique : guitare, basse, saxohpone, productrice"
+            alt : "musique : guitare, basse, saxophone, producteur"
         },
         {
             nm: '02',
@@ -17,11 +17,11 @@ export const  slides = [
         {
             nm: '03',
             src : antoineBoard,
-            alt : "Jeux de sociétés"
+            alt : "Jeux de société"
         },
         {
             nm: '04',
             src : antoineBeer,
-            alt : "Bière craft : zythologie amateur"
+            alt : "Bière craft : zythologie"
         }
     ];

@@ -1,8 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-
-import "./navbar.css";
 import logo from "../../assets/logo.svg";
 
 export const Navbar = () => {
@@ -13,48 +11,69 @@ export const Navbar = () => {
     { name: "Hobbies", link: "#hobby" },
   ];
 
-  let [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="shadow-md fixed w-full border-gray-200 bg-gray-50">
-      <div className="max-w-screen-xl md:flex-col lg:flex-row lg:flex-nowrap lg:justify-center flex flex-wrap items-center justify-between mx-auto p-4">
-        <img className="logo md:h-8 md:w-[16%] " src={logo} alt="logo" />
-
-        <div
-          onClick={() => setOpen(!open)}
-          className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  cursor-pointer md:hidden "
-        >
-          <Hamburger toggled={open} toggle={setOpen} />
-        </div>
-
-        <ul
-          className={`left-0 absolute  pb-4 md:static w-full pl-4 transition-all duration-500 ease-in md:flex md:items-center md:flex-row md:justify-end md:gap-1 lg:gap-3 lg:mt-2 ${
-            open
-              ? "top-20 bg-white opacity-95 md:bg-transparent "
-              : "top-[-490px]"
-          }`}
-        >
-          {Links.map((link) => (
-            <li
-              key={link.name}
-              className="md:ml-5 md:content-end md:text-lg  text-xl my-7 rounded-lg flex flex-col cursor-pointer"
-            >
-              <AnchorLink className="anchor-link" offset={50} href={link.link}>
-                <a
+    <nav className="shadow-md fixed w-full bg-white z-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex-shrink-0">
+            <img className="h-8 w-auto" src={logo} alt="Logo" />
+          </div>
+          
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {Links.map((link) => (
+                <AnchorLink
+                  key={link.name}
                   href={link.link}
-                  className="text-gray-800 hover:text-gray-400 duration-500"
+                  offset={50}
+                  className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
                 >
                   {link.name}
-                </a>
+                </AnchorLink>
+              ))}
+              <AnchorLink
+                href="#contact"
+                offset={50}
+                className="bg-gradient-to-r from-[#0983bc] to-[#4cbf95] text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transition duration-300"
+              >
+                Missive virtuelle
               </AnchorLink>
-            </li>
-          ))}
-          <button className="md:p-3 md:m-3 nav-connect text-[22px] cursor-pointer px-6 py-4 rounded-[50px]">
-            <a href="#contact"> Missive virtuelle</a>
-          </button>
-        </ul>
+            </div>
+          </div>
+          
+          <div className="md:hidden">
+            <Hamburger toggled={open} toggle={setOpen} />
+          </div>
+        </div>
       </div>
-    </div>
+
+      {/* Mobile menu */}
+      <div className={`md:hidden ${open ? "block" : "hidden"}`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {Links.map((link) => (
+            <AnchorLink
+              key={link.name}
+              href={link.link}
+              offset={50}
+              className="text-gray-800 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition duration-300"
+              onClick={() => setOpen(false)}
+            >
+              {link.name}
+            </AnchorLink>
+          ))}
+          <AnchorLink
+            href="#contact"
+            offset={50}
+            className="bg-gradient-to-r from-[#0983bc] to-[#4cbf95] text-white block px-3 py-2 rounded-md text-base font-medium hover:shadow-lg transition duration-300"
+            onClick={() => setOpen(false)}
+          >
+            Missive virtuelle
+          </AnchorLink>
+        </div>
+      </div>
+    </nav>
   );
 };
 

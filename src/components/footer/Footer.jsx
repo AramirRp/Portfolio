@@ -1,26 +1,51 @@
-import './footer.css'
-import footer_logo from '../../assets/logo.svg'
-
+import React from 'react';
+import footer_logo from '../../assets/logo.svg';
+import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome CSS
 
 export const Footer = () => {
   return (
-    <div className="footer flex flex-col gap-[6px]">
-        <div className="footer-top flex justify-between">
-            <div className="footer-top-left text-xl">
-                <img src={footer_logo} alt="" className='w-[35%] h-[50%] mb-2 ml-2' />
-                <p className='italic font-light'>crédits photos : <a href='https://www.instagram.com/ianmorlion/'>Ian Morlion</a> et <a href='https://www.facebook.com/vertigesphotovideo'>vertiges</a></p>
-
-            </div>
-
+    <footer className="bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
+          <div className="mb-6 sm:mb-0">
+            <img src={footer_logo} alt="Footer Logo" className="w-32 h-auto mb-4" />
+            <p className="text-sm text-gray-600 italic">
+              crédits photos : {' '}
+              <a href='https://www.instagram.com/ianmorlion/' className="text-black-600 hover:underline">Ian Morlion</a>
+              {' '}et{' '}
+              <a href='https://www.facebook.com/vertigesphotovideo' className="text-black-600 hover:underline">vertiges</a>
+            </p>
+          </div>
+          <div className="flex space-x-6">
+            <a 
+              href="https://github.com/aramirRp" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-600 transform transition duration-300 ease-in-out hover:scale-110 hover:-translate-y-1"
+            >
+              <i className="fa fa-github fa-2x"></i>
+            </a>
+            <a 
+              href="https://www.instagram.com/antoinerp" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-600 transform transition duration-300 ease-in-out hover:scale-110 hover:-translate-y-1"
+            >
+              <i className="fa fa-instagram fa-2x"></i>
+            </a>
+          </div>
         </div>
-        <hr />
-        <div className="footer-bottom flex justify-between text-lg">
-            <p className="footer-bottom-left">Crédits conception, mise en page, graphisme : Antoine Rogé-Picard</p>
-        <div className="footer-bottom-right flex gap-[50px] mb-[50px]">
+        
+        <hr className="border-gray-300 mb-8" />
+        
+        <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
+          <p className="mb-4 sm:mb-0 text-center sm:text-left">
+            Crédits conception, développement, mise en page, graphisme : Antoine Rogé-Picard
+          </p>
         </div>
-        </div>
-    </div>
-  )
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

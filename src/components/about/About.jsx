@@ -1,47 +1,41 @@
-
 import './about.css'
-
 import profile_img from "../../assets/photo_proflie.jpg"
-
 
 export const About = () => {
   return (
-    <div id="about" className='about flex flex-col items-center gap-y-10 mx-auto my-10'>
-      <div className="about-title  relative z-[-2]">
-        <h2 className='text-2xl font-semibold px-[30px] py-0'>About Me</h2>
+    <div id="about" className='about container mx-auto px-4 py-10'>
+      <div className="about-title text-center mb-10">
+        <h2 className='text-2xl sm:text-3xl font-semibold relative inline-block px-[30px]'>About Me</h2>
       </div>
-      <div className="about-sections">
-        <div className="about-left ">
-          <img className='profile-img w-[75%] h-[100%]  m-auto z-[-3] 'src={profile_img} alt="" />
+      <div className="about-sections flex flex-col lg:flex-row items-start gap-10">
+        <div className="about-left w-full lg:w-1/3">
+          <img className='profile-img w-[75%] max-w-xs mx-auto rounded-lg shadow-md' src={profile_img} alt="" />
         </div>
-        <div className="about-right mt-3 ml-3 flex flex-col gap-[60px]">
+        <div className="about-right w-full lg:w-2/3 mt-3 lg:mt-0">
           <div className="about-text flex flex-col gap-7 text-lg font-medium">
             <p>Après plusieurs années dans le domaine de la communication, j'ai décidé de me reconvertir en tant que développeur full-stack, spécialisé en frontend.</p>
             <p>En parallèle, je suis également un musicien, compositeur, producteur avec un projet encore non annoncé en préparation, prévu pour 2025.</p>
           </div>
-          <div className="about-skills flex flex-col gap-[10px]">
-            <div className="about-skill"><p>HTML</p><hr style={{width:"50%"}}/></div>
-            <div className="about-skill"><p>CSS</p><hr style={{width:"40%"}}/></div>
-            <div className="about-skill"><p>Javascript</p><hr style={{width:"50%"}}/></div>
-            <div className="about-skill"><p>Taiwlind CSS</p><hr style={{width:"30%"}}/></div>
-            <div className="about-skill"><p>React JS</p><hr style={{width:"45%"}}/></div>
-            <div className="about-skill"><p>Studio One</p><hr style={{width:"60%"}}/></div>
-            <div className="about-skill"><p>Photographie</p><hr style={{width:"50%"}}/></div>
-
+          <div className="about-skills flex flex-col gap-[10px] mt-10">
+            {['HTML', 'CSS', 'Javascript', 'Tailwind CSS', 'React JS', 'Laravel', 'Studio One', 'Photographie'].map((skill, index) => (
+              <div key={index} className="about-skill">
+                <p>{skill}</p>
+                <hr style={{width: `${[50, 40, 50, 45, 45, 35, 60, 50][index]}%`}} className="bg-gray-300 h-1 rounded"/>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      <div className="about-achievements w-full justify-around mb-3">
-        <div className="about-achievement flex justify-center items-center gap-5 transition-[0.5s]">
-          <h2>1+</h2>
-          <p>YEARS OF EXPERIENCE</p>
+      <div className="about-achievements w-full flex flex-col sm:flex-row justify-around mt-16 mb-3">
+        <div className="about-achievement flex justify-center items-center gap-5 transition-[0.5s] mb-5 sm:mb-0">
+          <h2 className='text-4xl sm:text-5xl font-bold'>1+</h2>
+          <p className="text-sm sm:text-base uppercase">Years of Experience</p>
         </div>
-        <hr />
+        <hr className="w-full sm:w-px sm:h-20 bg-gray-300 my-5 sm:my-0" />
         <div className="about-achievement flex justify-center items-center gap-5 transition-[0.5s]">
-          <h2 className='text-6xl font-bold bg-clip-text'>10+</h2>
-          <p>PROJECTS</p>
+          <h2 className='text-4xl sm:text-5xl font-bold bg-clip-text'>10+</h2>
+          <p className="text-sm sm:text-base uppercase">Projects</p>
         </div>
-        <hr />
       </div>
     </div>
   )
