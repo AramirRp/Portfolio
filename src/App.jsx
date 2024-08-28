@@ -8,10 +8,12 @@ import Contact  from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import Hobbies from './components/hobbies/hobbies';
 
+import { ThemeProvider } from '../src/components/Themes/ThemeContext';
+import ThemeSwitcher from './components/Themes/ThemeSwitcher';
 
 export const App = () => {
   return (
-    <div className='w-full h-screen'>
+    <ThemeProvider className='w-full h-screen'>
       <Navbar />
       <Hero />
       <About />
@@ -20,7 +22,8 @@ export const App = () => {
       <Hobbies />
       <Contact />
       <Footer />
-    </div>
+      <ThemeSwitcher />
+    </ThemeProvider>
   )
 }
 

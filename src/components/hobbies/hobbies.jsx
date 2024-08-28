@@ -1,19 +1,50 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { slides } from "../../assets/carouselData.js";
+import { ThemeContext } from "../Themes/ThemeContext";
 import "./hobbies.css"; // Ensure you have this for custom styles
 
 export const Hobbies = () => {
+  const { theme } = useContext(ThemeContext);
+
+  const getThemeStyles = () => {
+    switch (theme) {
+      case 'dark':
+        return {
+          bg: 'bg-gray-900',
+          title: 'text-white',
+          carouselBg: 'bg-gray-800',
+          textOverlay: 'bg-black bg-opacity-50',
+        };
+      case 'custom':
+        return {
+          bg: 'bg-orange-100',
+          title: 'text-orange-900',
+          carouselBg: 'bg-orange-200',
+          textOverlay: 'bg-orange-900 bg-opacity-50',
+        };
+      default: // light
+        return {
+          bg: 'bg-gray-100',
+          title: 'text-gray-800',
+          carouselBg: 'bg-white',
+          textOverlay: 'bg-black bg-opacity-30',
+        };
+    }
+  };
+
+  const styles = getThemeStyles();
+
   return (
-    <div id="hobby" className="bg-gray-100 py-16 sm:py-24">
+    <div id="hobby" className={`${styles.bg} py-16 sm:py-24 transition-colors duration-300`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800">
+          <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${styles.title}`}>
             Mes Hobbies
           </h2>
         </div>
-        <div className="max-w-4xl mx-auto">
+        <div className={`max-w-4xl mx-auto ${styles.carouselBg} rounded-lg overflow-hidden shadow-xl`}>
           <Carousel
             autoPlay
             infiniteLoop
@@ -23,7 +54,7 @@ export const Hobbies = () => {
             showArrows={true}
             emulateTouch
             swipeable
-            className="rounded-lg overflow-hidden shadow-xl"
+            className="rounded-lg overflow-hidden"
           >
             {slides.map((image) => (
               <div key={image.nm} className="relative">
@@ -32,7 +63,7 @@ export const Hobbies = () => {
                   alt={image.alt}
                   className="w-full h-[400px] object-cover" // Fixed height for consistency
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end justify-start">
+                <div className={`absolute inset-0 ${styles.textOverlay} flex items-end justify-start`}>
                   <p className="text-white text-lg sm:text-xl font-semibold p-4 sm:p-6">
                     {image.alt}
                   </p>

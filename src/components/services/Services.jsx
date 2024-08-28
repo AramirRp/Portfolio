@@ -1,6 +1,8 @@
+import React, { useState, useContext } from "react";
 import Services_Data from "../../assets/services_data";
-import "./services.css";
-import { useState } from "react";
+import { ThemeContext } from "../Themes/ThemeContext";
+import './services.css'
+
 
 const parastyle = {
   WebkitLineClamp: 3,
@@ -11,12 +13,53 @@ const parastyle = {
 
 export const Services = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const { theme } = useContext(ThemeContext);
+
+  const getThemeStyles = () => {
+    switch (theme) {
+      case 'dark':
+        return {
+          bg: 'bg-gray-900',
+          cardBg: 'bg-gray-800',
+          title: 'text-white',
+          text: 'text-gray-300',
+          hoverBorder: 'border-[#24614b]',
+          hoverGradient: 'bg-gradient-to-br from-blue-600 to-teal-600',
+          buttonGradient: 'from-blue-600 to-teal-600',
+          buttonHoverGradient: 'from-teal-600 to-blue-600',
+        };
+      case 'custom':
+        return {
+          bg: 'bg-orange-100',
+          cardBg: 'bg-orange-50',
+          title: 'text-orange-900',
+          text: 'text-orange-800',
+          hoverBorder: 'border-red-400',
+          hoverGradient: 'bg-gradient-to-br from-orange-400 to-red-400',
+          buttonGradient: 'from-orange-400 to-red-400',
+          buttonHoverGradient: 'from-red-400 to-orange-400',
+        };
+      default: // light
+        return {
+          bg: 'bg-gray-100',
+          cardBg: 'bg-white',
+          title: 'text-gray-800',
+          text: 'text-gray-600',
+          hoverBorder: 'border-[#24614b]',
+          hoverGradient: 'bg-gradient-to-br from-[#689bb5] to-[#67c7a2]',
+          buttonGradient: 'from-[#689bb5] to-[#67c7a2]',
+          buttonHoverGradient: 'from-[#67c7a2] to-[#689bb5]',
+        };
+    }
+  };
+
+  const styles = getThemeStyles();
 
   return (
-    <div id="services" className="services bg-gray-100 py-20">
+    <div id="services" className={`services ${styles.bg} py-20 transition-colors duration-300`}>
       <div className="container mx-auto px-4">
         <div className="services-title text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800">
+          <h2 className={`text-4xl sm:text-5xl font-bold ${styles.title}`}>
             Mes Compétences
           </h2>
         </div>
@@ -24,23 +67,28 @@ export const Services = () => {
           {Services_Data.map((service, index) => (
             <div
               key={index}
-              className="services-format bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-transparent hover:border-black"
+              className={`services-format ${styles.cardBg} rounded-xl shadow-md overflow-hidden border-2 border-transparent
+                          transition-all duration-300 hover:${styles.hoverBorder} hover:${styles.hoverGradient} 
+                          transform hover:scale-105 group`}
             >
               <div className="p-8 transition-colors duration-300">
-                <h4 className="text-lg font-semibold text-[#24614b] mb-3 group-hover:text-white">{service.s_no}</h4>
-                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800 group-hover:text-white">
+                <h4 className={`text-lg font-semibold text-[#24614b] mb-3 group-hover:text-white`}>{service.s_no}</h4>
+                <h3 className={`text-2xl sm:text-3xl font-bold mb-4 ${styles.title} group-hover:bg-white group-hover:bg-clip-text group-hover:text-transparent`}>
                   {service.s_name}
                 </h3>
                 <p 
-                  className={`text-gray-600 text-lg leading-relaxed mb-6 group-hover:text-gray-200`}
+                  className={`${styles.text} text-lg leading-relaxed mb-6 group-hover:text-white`}
                   style={openIndex === index ? null : parastyle}
                 >
                   {service.full}
                 </p>
               </div>
-              <div className="bg-gray-100 p-6">
-                <button
-                  className="w-full font-semibold text-lg py-2 rounded-lg text-white transition-all duration-300 bg-gradient-to-r from-[#689bb5] to-[#67c7a2] hover:from-[#67c7a2] hover:to-[#689bb5]"
+              <div className={`${styles.cardBg} p-6`}>
+              <button
+                  className={`w-full font-semibold text-lg py-2 rounded-lg text-white transition-all duration-300 bg-gradient-to-r 
+                              ${theme === 'light' 
+                                ? 'from-[#689bb5] to-[#67c7a2] hover:from-[#67c7a2] hover:to-[#689bb5]'
+                                : `${styles.buttonGradient} hover:${styles.buttonHoverGradient}`}`}
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 >
                   {openIndex === index ? "Read less" : "Read more"}

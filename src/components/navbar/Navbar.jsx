@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { ThemeContext } from "../Themes/ThemeContext";
 import logo from "../../assets/logo.svg";
 
 export const Navbar = () => {
@@ -12,9 +13,13 @@ export const Navbar = () => {
   ];
 
   const [open, setOpen] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <nav className="shadow-md fixed w-full bg-white z-50">
+    <nav className={`shadow-md fixed w-full z-50 transition-colors duration-300
+                     ${theme === 'light' ? 'bg-white' : 
+                       theme === 'dark' ? 'bg-gray-900' : 
+                       'bg-orange-50'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -28,7 +33,10 @@ export const Navbar = () => {
                   key={link.name}
                   href={link.link}
                   offset={50}
-                  className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition duration-300
+                              ${theme === 'light' ? 'text-gray-800 hover:text-gray-600' :
+                                theme === 'dark' ? 'text-gray-300 hover:text-white' :
+                                'text-orange-700 hover:text-orange-900'}`}
                 >
                   {link.name}
                 </AnchorLink>
@@ -36,7 +44,10 @@ export const Navbar = () => {
               <AnchorLink
                 href="#contact"
                 offset={50}
-                className="bg-gradient-to-r from-[#0983bc] to-[#4cbf95] text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transition duration-300"
+                className={`px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transition duration-300
+                            ${theme === 'light' ? 'bg-gradient-to-r from-[#0983bc] to-[#4cbf95] text-white' :
+                              theme === 'dark' ? 'bg-blue-600 text-white' :
+                              'bg-orange-400 text-white'}`}
               >
                 Missive virtuelle
               </AnchorLink>
@@ -44,7 +55,7 @@ export const Navbar = () => {
           </div>
           
           <div className="md:hidden">
-            <Hamburger toggled={open} toggle={setOpen} />
+            <Hamburger toggled={open} toggle={setOpen} color={theme === 'dark' ? '#ffffff' : '#000000'} />
           </div>
         </div>
       </div>
@@ -57,7 +68,10 @@ export const Navbar = () => {
               key={link.name}
               href={link.link}
               offset={50}
-              className="text-gray-800 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium transition duration-300"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition duration-300
+                          ${theme === 'light' ? 'text-gray-800 hover:text-gray-600' :
+                            theme === 'dark' ? 'text-gray-300 hover:text-white' :
+                            'text-orange-700 hover:text-orange-900'}`}
               onClick={() => setOpen(false)}
             >
               {link.name}
@@ -66,7 +80,10 @@ export const Navbar = () => {
           <AnchorLink
             href="#contact"
             offset={50}
-            className="bg-gradient-to-r from-[#0983bc] to-[#4cbf95] text-white block px-3 py-2 rounded-md text-base font-medium hover:shadow-lg transition duration-300"
+            className={`block px-3 py-2 rounded-md text-base font-medium hover:shadow-lg transition duration-300
+                        ${theme === 'light' ? 'bg-gradient-to-r from-[#0983bc] to-[#4cbf95] text-white' :
+                          theme === 'dark' ? 'bg-blue-600 text-white' :
+                          'bg-orange-400 text-white'}`}
             onClick={() => setOpen(false)}
           >
             Missive virtuelle
