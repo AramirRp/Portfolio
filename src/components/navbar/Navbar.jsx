@@ -3,6 +3,7 @@ import { Turn as Hamburger } from "hamburger-react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { ThemeContext } from "../Themes/ThemeContext";
 import logo from "../../assets/logo.svg";
+import logoWhite from "../../assets/logo-white.svg"
 
 export const Navbar = () => {
   const Links = [
@@ -15,6 +16,18 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { theme } = useContext(ThemeContext);
 
+  const getLogo = (theme) => {
+    switch(theme) {
+      case 'dark':
+        return logoWhite;
+      case 'light':
+      case 'custom':
+      default:
+        return logo;
+    }
+  };
+
+
   return (
     <nav className={`shadow-md fixed w-full z-50 transition-colors duration-300
                      ${theme === 'light' ? 'bg-white' : 
@@ -22,9 +35,9 @@ export const Navbar = () => {
                        'bg-orange-50'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <img className="h-8 w-auto" src={logo} alt="Logo" />
-          </div>
+        <div className="flex-shrink-0">
+  <img className="h-8 w-auto" src={getLogo(theme)} alt="Logo" />
+</div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">

@@ -1,10 +1,23 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from "../Themes/ThemeContext";
 import footer_logo from '../../assets/logo.svg';
+import logoWhite from "../../assets/logo-white.svg"
 import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome CSS
 
 export const Footer = () => {
   const { theme } = useContext(ThemeContext);
+
+  const getLogo = (theme) => {
+    switch(theme) {
+      case 'dark':
+        return logoWhite;
+      case 'light':
+      case 'custom':
+      default:
+        return footer_logo;
+    }
+  };
+
 
   const getThemeStyles = () => {
     switch (theme) {
@@ -42,7 +55,7 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
           <div className="mb-6 sm:mb-0">
-            <img src={footer_logo} alt="Footer Logo" className="w-32 h-auto mb-4" />
+            <img src={getLogo(theme)} alt="Footer Logo" className="w-32 h-auto mb-4" />
             <p className={`text-sm ${styles.text} italic`}>
               crédits photos : {' '}
               <a href='https://www.instagram.com/ianmorlion/' className={`${styles.link} hover:underline`}>Ian Morlion</a>
