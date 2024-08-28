@@ -42,27 +42,22 @@ export const Navbar = () => {
   const LanguageFlag = ({ language, onClick }) => (
     <button 
       onClick={() => onClick(language)} 
-      className="w-8 h-6 mx-1 transition-transform duration-300 hover:scale-110"
+      className={`w-8 h-6 mx-1 transition-all duration-300 hover:scale-110 rounded-sm overflow-hidden
+                  ${i18n.language === language ? 'border-2 border-blue-500 shadow-glow' : 'border border-gray-300'}`}
     >
       <img 
         src={language === 'fr' ? frFlag : enFlag} 
         alt={language === 'fr' ? 'French' : 'English'} 
-        className="w-full h-full object-cover rounded-sm"
+        className="w-full h-full object-cover"
       />
     </button>
   );
 
   return (
-    <nav
-      className={`shadow-md fixed w-full z-50 transition-colors duration-300
-      ${
-        theme === "light"
-          ? "bg-white"
-          : theme === "dark"
-          ? "bg-gray-900"
-          : "bg-orange-50"
-      }`}
-    >
+    <nav className={`shadow-md fixed w-full z-50 transition-colors duration-300
+      ${theme === 'light' ? 'bg-white' : 
+        theme === 'dark' ? 'bg-gray-900' : 
+        'bg-orange-50'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
