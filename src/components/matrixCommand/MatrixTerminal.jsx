@@ -1,4 +1,3 @@
-// src/components/MatrixTerminal.js
 import React, { useState, useEffect } from 'react';
 
 const MatrixTerminal = ({ isVisible, onClose }) => {
@@ -9,29 +8,53 @@ const MatrixTerminal = ({ isVisible, onClose }) => {
     "Loading personal data...",
     "Name: Antoine Rogé-Picard",
     "Occupation: Full Stack Developer",
-    "Skills: HTML, CSS, JavaScript, React, Laravel",
+    "Skills: Tailwind CSS, JavaScript, React, Html, Laravel",
     "Hobbies: Music Production, Photography",
     "Status: Ready for new challenges",
     "Mission: Create amazing web experiences",
-    "Follow the white rabbit",
-    "Type 'exit' to close this terminal."
+    "Keep in touch in the form below",
+    "follow the white rabbit",
+    "Type 'exit' or press ESC to close this terminal."
   ];
 
   useEffect(() => {
     if (isVisible) {
-      let i = 0;
+      setText('');
+      let fullText = '';
+      let lineIndex = 0;
+      let charIndex = 0;
+
       const intervalId = setInterval(() => {
-        if (i < information.length) {
-          setText(prev => prev + information[i] + '\n');
-          i++;
+        if (lineIndex < information.length) {
+          if (charIndex < information[lineIndex].length) {
+            fullText += information[lineIndex][charIndex];
+            setText(fullText);
+            charIndex++;
+          } else {
+            fullText += '\n';
+            setText(fullText);
+            lineIndex++;
+            charIndex = 0;
+          }
         } else {
           clearInterval(intervalId);
         }
-      }, 500);
+      }, 50);
 
       return () => clearInterval(intervalId);
     }
   }, [isVisible]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
 
   const handleInput = (e) => {
     if (e.key === 'Enter') {
