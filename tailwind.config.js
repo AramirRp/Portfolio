@@ -17,6 +17,9 @@ export default {
       backgroundColor: ['light', 'dark', 'custom'],
       textColor: ['light', 'dark', 'custom'],
     },
+    willChange: {
+      'transform': 'transform',
+    },
   },
     plugins: [],
 };
