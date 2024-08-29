@@ -1,6 +1,6 @@
 import React from 'react';
 import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n'; // Make sure this path is correct
+import i18n from './i18n';
 
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';

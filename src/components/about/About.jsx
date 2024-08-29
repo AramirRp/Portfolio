@@ -43,7 +43,7 @@ export const About = () => {
     <div className="container mx-auto px-4 py-16">
       <div className="about-title text-center mb-10">
         <h2 className={`text-2xl sm:text-3xl font-semibold relative inline-block px-[30px] bg-gradient-to-r ${styles.title} bg-clip-text text-transparent`}>
-          {t('about.title')} {/* Translate this */}
+          {t('about.title')}
         </h2>
       </div>
       <div className="about-sections flex flex-col lg:flex-row items-start gap-10">
@@ -52,8 +52,8 @@ export const About = () => {
         </div>
         <div className="about-right w-full lg:w-2/3 mt-3 lg:mt-0">
           <div className="about-text flex flex-col gap-7 text-lg font-medium">
-            <p>{t('about.paragraph1')}</p> {/* Translate this */}
-            <p>{t('about.paragraph2')}</p> {/* Translate this */}
+            <p>{t('about.paragraph1')}</p> 
+            <p>{t('about.paragraph2')}</p> 
           </div>
           <div className="about-skills flex flex-col gap-[15px] mt-10">
             {['HTML', 'CSS', 'Javascript', 'Tailwind CSS', 'React JS', 'Laravel', 'Studio One', t('about.photography')].map((skill, index) => (
