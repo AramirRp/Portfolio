@@ -1,6 +1,6 @@
 import project1_img from '../assets/project1_img.webp'
-import project2_img from '../assets/project2_img.webp'
 import project3_img from '../assets/project3_img.webp'
+import project4_img from '../assets/antoinerp-dashboard.jpg'
 
 const mywork_data = [
     {
@@ -11,9 +11,9 @@ const mywork_data = [
     },
     {
         w_no: 2,
-        w_name_key: "myWork.projects.koiKonEcoute",
-        w_img: project2_img,
-        w_link: "https://koi-kon-ecoute.vercel.app"
+        w_name_key: "myWork.projects.dashboard",
+        w_img: project4_img,
+        w_link: "https://test-technical-tekkare-4vin.vercel.app"
     },
     {
         w_no: 3,

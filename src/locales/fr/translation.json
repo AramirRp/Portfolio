@@ -69,7 +69,9 @@
     "projects": {
       "koiKonRegarde": "KoiKonRegarde",
       "koiKonEcoute": "KoiKonEcoute - V1",
-      "dangerZoneWeb": "DangerZoneWeb"
+      "dangerZoneWeb": "DangerZoneWeb",
+      "dashboard": "Tableau de bord"
+
     }
   },
   "skills": {
