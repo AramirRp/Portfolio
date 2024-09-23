@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { slides } from "../../assets/carouselData.js";
 import { ThemeContext } from "../Themes/ThemeContext";
 import "./hobbies.css"; // Ensure you have this for custom styles
+import arrow_icon from "../../assets/arrow_icon.svg";
 
 export const Hobbies = () => {
   const { theme } = useContext(ThemeContext);
@@ -18,6 +19,8 @@ export const Hobbies = () => {
           bg: 'bg-gray-900',
           title: 'text-white',
           carouselBg: 'bg-gray-800',
+          buttonBg: 'bg-blue-600 hover:bg-blue-700',
+          buttonText: 'text-white',
           textOverlay: 'bg-black bg-opacity-50',
         };
       case 'custom':
@@ -25,6 +28,8 @@ export const Hobbies = () => {
           bg: 'bg-orange-100',
           title: 'text-orange-900',
           carouselBg: 'bg-orange-200',
+          buttonBg: 'bg-orange-500 hover:bg-orange-600',
+          buttonText: 'text-white',
           textOverlay: 'bg-orange-900 bg-opacity-50',
         };
       default: // light
@@ -32,6 +37,8 @@ export const Hobbies = () => {
           bg: 'bg-gray-100',
           title: 'text-gray-800',
           carouselBg: 'bg-white',
+          buttonBg: 'bg-gray-800 hover:bg-gray-700',
+          buttonText: 'text-white',
           textOverlay: 'bg-black bg-opacity-30',
         };
     }
@@ -74,6 +81,17 @@ export const Hobbies = () => {
             </div>
           ))}
         </Carousel>
+      </div>
+      <div className="text-center mt-12 sm:mt-16">
+        <a 
+          href="https://www.playbook.com/s/antoinerp-photography/main-presentation" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={`inline-flex items-center px-6 py-3 ${styles.buttonBg} ${styles.buttonText} font-semibold rounded-full transition-all duration-300 text-sm sm:text-base hover:gap-7`}
+        >
+          {t('hobbies.photography')}
+          <img src={arrow_icon} alt={t('myWork.arrowAlt')} className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-all duration-300" />
+        </a>
       </div>
     </div>
   </div>
